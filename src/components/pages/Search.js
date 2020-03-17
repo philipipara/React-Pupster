@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Footer from "./Footer";
 import API from "./API";
 
 
@@ -12,9 +11,7 @@ class Search extends Component{
       search: ""
   }
   
-  componentDidMount() {
-    this.searchDog("");
-  }
+
 
   searchDog(query){
     API.getDogByBreed(query)
@@ -38,14 +35,14 @@ class Search extends Component{
 
   render(){
     return (
-    <div>
+    
     <div className = "container">
       
       <h1>Search by Breed</h1>
       <form>
       <input
           type="text"
-          placeholder="search"
+          placeholder="search for a good boy"
           name="search"
           value = {this.state.search}
           onChange = {this.handleInputChange}
@@ -54,11 +51,10 @@ class Search extends Component{
 
 
       </form>
-      <img src = {this.state.result} alt = ".pic"></img>
+      <img src = {this.state.result} alt = ""></img>
       
     </div>
-        <Footer/>
-    </div>
+  
   );
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Footer from "./Footer";
 import API from "./API";
+import Card from "../Card";
 
 
 class Discover extends Component{
@@ -24,25 +24,15 @@ class Discover extends Component{
     
   };
 
-  // handleFriendsLike = event => { 
-  //     event.preventDefault();
-  //     let rand = Math.floor(Math.random() * 4);
     handleFriendsLike = () => {
     let newCount = this.state.count + 1
     this.setState({
       count: newCount
+      
     })
-  
+    alert("You met a good boy!!!");
+       this.getImage();
 
-
-      if (newCount){
-        alert("You met a good boy!");
-        this.setState({count: this.state.count + 1});
-        this.getImage();
-      }
-      else{
-        this.getImage();
-      }
   }
 
   handleFriendsDislike = event =>{
@@ -53,21 +43,21 @@ class Discover extends Component{
   
   render(){
     return (
-    <div>
+   
     <div className = "container">
       
       <h1>Meet a friend!</h1>
       <div className = "card">
+        <div>< Card />
                 <img style = {{height: '400px'}}src = {this.state.result} alt = "pic"></img>
                 <button onClick ={this.handleFriendsLike} className = "card-btn pass">Like</button>
-                <button onClick ={this.handleFriendsDislike} className = "card=btn pick">Dislike</button>
+                <button onClick ={this.handleFriendsDislike} className = "card-btn pick">Dislike</button>
       </div>
       <h2>Friends made: {this.state.count}</h2>
-  
+       </div>
       
     </div>
-      <Footer/>
-    </div>
+    
   );
   }
 }
