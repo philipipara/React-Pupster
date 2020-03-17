@@ -7,7 +7,6 @@ class Discover extends Component{
   
   state = {
     result: "",
-    matched: false,
     count: 0
   }
 
@@ -25,12 +24,18 @@ class Discover extends Component{
     
   };
 
-  handleFriendsLike = event => { 
-      event.preventDefault();
-      let rand = Math.floor(Math.random() * 4);
+  // handleFriendsLike = event => { 
+  //     event.preventDefault();
+  //     let rand = Math.floor(Math.random() * 4);
+    handleFriendsLike = () => {
+    let newCount = this.state.count + 1
+    this.setState({
+      count: newCount
+    })
+  
 
 
-      if (rand === 1 ){
+      if (newCount){
         alert("You met a good boy!");
         this.setState({count: this.state.count + 1});
         this.getImage();
