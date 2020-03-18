@@ -30,10 +30,11 @@
 
 .nav-item1 {
   float: left;
-  height: 50px;
+  color: teal;
   padding: 15px 15px;
+  margin: 10px;
   font-size: 18px;
-  line-height: 20px;
+
 }
 
 .nav-item {
@@ -41,12 +42,45 @@
   padding-bottom: 15px;
 }
 
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.card-btn.pass {
+  color:green;
+
 }
+
+.card-btn.pick {
+  color: red;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  margin-left: 40%;
+}
+
+img {
+
+  align-items: center;
+
+}
+.card {
+  background-size: cover;
+  background-position: 50%;
+  background-clip: content-box;
+  border: 6px solid #fff;
+  height: 400px;
+  width: 400px;
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+
 
 
 @keyframes App-logo-spin {
