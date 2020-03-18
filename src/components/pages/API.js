@@ -9,6 +9,6 @@ export default {
   },
   
   getDogByBreed: function(query){
-    return axios.get("https://dog.ceo/api/breed/"+ query + "/images/random");
+    return axios.get(BREEDURL + query + "/images/random");
   }
 };
